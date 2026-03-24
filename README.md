@@ -27,20 +27,25 @@ password_encryptor/
 ├── pin.txt                   stores your hashed PIN
 └── instagram_password.txt    stores your encrypted password
 ```
-Setup and Usage
-Requirements
+### Setup,Usage And Requirements
 
-Python 3.x
-uv (package manager)
+**1.Python 3.x**
 
+**2.uv (package manager)**
 ### Installation
 ```
 uv init password_encryptor
 cd password_encryptor
 uv add cryptography
+```
+
+### Running The Tool
+
+```
 .venv\Scripts\python.exe password_manager.py
 ```
 *On first run it will automatically generate your secret key and ask you to set up a master PIN. After that you will see the main menu every time you run it.*
+
 ``` py
 import os
 import hashlib
@@ -158,6 +163,9 @@ def menu():
 menu()
 ```
 *Main code that encrypts and stores your Instagram password using Fernet symmetric encryption. Protected by a master PIN using SHA-256 hashing, with a simple terminal menu to save, view, delete and update your password.*
+
+
+
 ### Security Notes
 
 Never share or delete the secret.key file. Without it, your encrypted password cannot be recovered by anyone, including you.
