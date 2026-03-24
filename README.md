@@ -32,12 +32,12 @@ Requirements
 
 Python 3.x
 uv (package manager)
+
+### Installation
 ```
-Installation
 uv init password_encryptor
 cd password_encryptor
 uv add cryptography
-Running the tool
 .venv\Scripts\python.exe password_manager.py
 ```
 *On first run it will automatically generate your secret key and ask you to set up a master PIN. After that you will see the main menu every time you run it.*
